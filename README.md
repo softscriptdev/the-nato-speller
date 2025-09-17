@@ -73,3 +73,4 @@ In the quiz you have the option of entering a text and you are then asked how to
 - v1.0.0: Full functionality with UI
 - v2.0.0: Full UI redesign
 - v3.0.0: Bug fix with special characters
+- v3.1.0: Display problems have been fixed
