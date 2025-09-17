@@ -2,7 +2,7 @@ export default function TextForQuiz({ setquiztext, setstart, getquiztext, style 
     return (
         <header className={style.quizheader}>
             <input
-                onChange={(e) => setquiztext(e.target.value.trim())}
+                onChange={(e) => setquiztext(e.target.value.trim().toLowerCase())}
                 type="text"
                 placeholder="Type text for translation ..."
             />
