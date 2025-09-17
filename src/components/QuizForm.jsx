@@ -85,10 +85,7 @@ export default function QuizForm({
     let count = 0;
 
     letters.forEach((_letter, index) => {
-      if (
-        natoWords[index] === "(space)" ||
-        !lettersandnumb.includes(_letter)
-      )
+      if (natoWords[index] === "(space)" || !lettersandnumb.includes(_letter))
         count++;
       else if (
         natoWords[index] === userInput[index] &&
@@ -135,7 +132,11 @@ export default function QuizForm({
                     </p>
                   ) : (
                     <p key={`sign-${index}`} className={style.space}>
-                      ({letters[index].toUpperCase()})
+                      (
+                      {lettersandnumb.includes(letters[index])
+                        ? letters[index].toUpperCase()
+                        : `unknown: ${letters[index]}`}
+                      )
                     </p>
                   )}
                 </>
